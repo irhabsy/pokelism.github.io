@@ -1,0 +1,80 @@
+/* Gaya umum */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  overflow: hidden;
+}
+
+/* Intro */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s ease-in-out 2s forwards;
+}
+
+.brand-name {
+  font-size: 3rem;
+  color: #ff4655;
+  letter-spacing: 4px;
+  animation: scaleUp 2s ease;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Halaman utama */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1a1a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #ff4655;
+}
+
+/* Konten */
+.content {
+  text-align: center;
+  margin-top: 100px;
+}
